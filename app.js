@@ -211,8 +211,8 @@
 
 // -----------------------Manipulation javascript ---------------------------
 
-const text = document.querySelector('h1');
-const changeColor = document.querySelector('.changeColor');
+// const text = document.querySelector('h1');
+// const changeColor = document.querySelector('.changeColor');
 
 
 // // text.style.color = 'white';
@@ -222,9 +222,9 @@ const changeColor = document.querySelector('.changeColor');
 
 // // text.classList.remove('change');
 
-changeColor.addEventListener('click', function(){
-    text.classList.add('change');
-}) // callback function will execited
+// // changeColor.addEventListener('click', function(){
+// //     text.classList.add('change');
+// // }) // callback function will execited
 
 
 // changeColor.addEventListener('click', function(){
@@ -233,9 +233,9 @@ changeColor.addEventListener('click', function(){
 
 
 // const userList = document.querySelectorAll(".name-list li");
-// const userList = document.querySelector(".name-list");
-// const listInput = document.querySelector(".list-input");
-// const addListBtn = documentl.querySelector(".addListBtn");
+const userList = document.querySelector(".name-list");
+const listInput = document.querySelector(".list-input");
+const addListBtn = document.querySelector(".addListBtn");
 
 // for(user of userList){
 //     user.addEventListener('click', function(){
@@ -248,17 +248,15 @@ changeColor.addEventListener('click', function(){
 // console.log(listInput.value);
 
 
-// addListBtn.addEventListener('click', function(){
-// // Create an li out of thin air
-// const newLi = document.createElement('LI');
-// const liContent = document.createTextNode('sdf');
-// console.log(listInput.value);
-
-// // Add the input value inside that new li
-// // Attaching the li to the user list
-
-
-// });
+addListBtn.addEventListener('click', function(){
+// Create an li out of thin air
+const newLi = document.createElement('LI');
+const liContent = document.createTextNode(listInput.value);
+// Add the input value inside that new li
+newLi.appendChild(liContent);
+// Attaching the li to the user list
+userList.appendChild(newLi);
 
 
-// console.log('erlan')
+});
+
